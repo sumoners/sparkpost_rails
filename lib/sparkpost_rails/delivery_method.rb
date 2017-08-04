@@ -44,7 +44,7 @@ module SparkPostRails
   private
     def find_sparkpost_data_from mail
       if mail[:sparkpost_data]
-        eval(mail[:sparkpost_data].value)
+        eval(mail[:sparkpost_data].decoded)
       else
         Hash.new
       end
